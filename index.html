@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang=en-us>
+<head>
+	<title>React Example: Music</title>
+	<meta charset=utf-8>
+<!--
+On an actual, non-CodePen site, you'd send the Content-Security-Policy via headers from the server, not in a META tag
+The nonce for CSP 3 Strict Dynamic would be generated server side and set as an attribute of
+
+1) the otherwise optional web_author META element
+2) the SCRIPT element at the bottom of the BODY
+
+NB: If you alter the nonce in the http-equiv META tag, the STYLE and SCRIPT elements will not load, and an error message
+will be generated in the developer's tools.
+-->
+	<meta http-equiv=Content-Security-Policy content="script-src 'self' http: https: 'nonce-SM56vT85MkcK2gFpi9iN4VcO1rW3LYGHAnSgGD1a' 'strict-dynamic' ;">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<meta name=web_author content="BMT Systems, Inc." data-nonce=SM56vT85MkcK2gFpi9iN4VcO1rW3LYGHAnSgGD1a>
+	<link rel=stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+</head>
+<body>
+	<h1>React via CDN, loader, and strong CSP</h1>
+	<div id=root></div>
+	<script src="javascript/defer.module.js" type=module nonce=SM56vT85MkcK2gFpi9iN4VcO1rW3LYGHAnSgGD1a></script>
+</body>
+</html>
